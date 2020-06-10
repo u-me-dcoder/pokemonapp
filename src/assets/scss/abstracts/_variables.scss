@@ -1,0 +1,230 @@
+//bootstrap configuratin start
+
+// Ratios for typography
+$double-octave: 4;
+$pi: 3.14159265359;
+$major-twelfth: 3;
+$major-eleventh: 2.666666667;
+$major-tenth: 2.5;
+$octave: 2;
+$major-seventh: 1.875;
+$minor-seventh: 1.777777778;
+$major-sixth: 1.666666667;
+$phi: 1.618034;
+$golden: $phi;
+$minor-sixth: 1.6;
+$fifth: 1.5;
+$augmented-fourth: 1.41421;
+$fourth: 1.333333333;
+$major-third: 1.25;
+$minor-third: 1.2;
+$major-second: 1.125;
+$minor-second: 1.066666667;
+
+:root {
+  
+}
+
+$blue: #2460b9;
+$cyan: #2b91fe;
+$yellow-10: #ffc35b;
+$yellow-20:#F49300;
+$green-10: #afff93;
+$green-30:#38C407;
+
+$blue-100: #012e78;
+$blue-200: #2460b9;
+$blue-300: #cde1ff;
+$blue-400: #003893;
+$blue-500: #2b91fe;
+$blue-600: #dfecff;
+$blue-700: #acd4ff;
+$blue-800: #5080c7;
+$blue-900: #f1f7ff;
+
+
+//bootstrap colors overides
+
+$gray-100: #e0e0e0;
+$gray-200: #f0f0f0;
+$gray-300: #858585;
+$gray-400: #666666;
+$gray-500: #a3a3a3;
+$gray-800: #1a1a1a;
+$grey-900: #808080;
+$gray-10: #f8f8f8;
+$gray-20: #c2c2c2;
+$red: #e74343;
+$red-100: #bd0912;
+
+$yellow: #ffc35b;
+$text: #001a9a;
+$info: #006ab5;
+$black: #000000;
+$white: #ffffff;
+$border: #e6e6e6;
+
+$green: #42bc38;
+$green-100: #afff93;
+
+
+
+
+//new gridbreakpoing
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1366px,
+);
+
+//colors
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "test": #bacdef,
+  ),
+  $colors
+);
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "navy-5": #0e3066,
+    "blue-10": #acd4ff,
+    "navy-30": #10cdd9,
+    "navy-40": #052354,
+    "blue-20": #2b91fe,
+    "navy-10": #2460b9,
+    "blue-400": $blue-400,
+    "yellow-10": $yellow-10,
+    "green-10": $green-10,
+    "gray-400":$gray-400,
+    "gray-500":$gray-500,
+  ),
+  $theme-colors
+);
+
+//spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 2,
+    ),
+    6: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
+
+//responsive font size setting
+$enable-responsive-font-sizes: true;
+$rfs-factor: $minor-third;
+$rfs-unit: px;
+
+//bootstrap grid configuration
+$grid-gutter-width: 16px !default;
+
+
+//
+$body-bg: white;
+$border-color-gray: #cccccc;
+
+// base font family
+$font-family-base: "Mukta", sans-serif;
+
+$input-btn-padding-y-sm: 0.125rem;
+$input-btn-padding-x-sm: 0.5rem;
+$input-btn-padding-y-lg: 0.5rem !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-font-size: 0.833rem;
+$input-btn-font-size-lg: 0.75rem;
+
+$input-info-color: #9c9ad0;
+
+//form elements
+$input-height: calc(1.25em + 0.833rem + 2px);
+$input-padding-y: 0.5rem;
+$input-padding-x: 0.75rem;
+
+$input-padding-y-sm: 0.5rem;
+$input-padding-x-sm: 0.75rem;
+$input-font-size-sm: 0.75rem;
+
+//$input-font-family:
+$input-font-size: 0.833rem;
+$input-color: $gray-800;
+$input-bg: $white;
+$input-border-width: 1px;
+$input-border-radius: 2px;
+$input-border-color: #e0e0e0;
+
+//$input-box-shadow
+$input-placeholder-color: $gray-500;
+
+$form-group-margin-bottom: 16px;
+//$input-focus-color
+$input-focus-border-color: #2b91fe;
+//$input-focus-bg:red;
+$input-box-shadow: inset 0 1px 1px rgba($black, 0.075);
+$input-focus-box-shadow: none;
+//$input-btn-focus-color:rgba($component-active-bg, .25) !default;
+
+//label spacing
+
+//form-row gap
+
+$form-grid-gutter-width: 16px;
+
+//alert
+$alert-padding-y: 0.5rem;
+$alert-padding-x: 0.75rem;
+$alert-margin-bottom: 1rem;
+$alert-border-radius: 4px;
+$alert-link-font-weight: 400;
+$alert-border-width: 1px;
+
+
+
+
+//breadcrumb
+
+$breadcrumb-padding-y: 0.5rem;
+$breadcrumb-padding-x: 0.5rem;
+$breadcrumb-bg: rgba(map-get($ias, blue-20), 0.24);
+$breadcrumb-divider: ">";
+$breadcrumb-active-color: map-get($ias, navy-10);
+$breadcrumb-item-color: $gray-300;
+$breadcrumb-border-radius: 2px;
+
+//progressbar
+
+$progress-height: 5px;
+$progress-bg: $blue;
+$progress-border-radius: 0;
+$progress-bar-bg: $red;
+
+//Tooltip
+$tooltip-color: $white;
+$tooltip-font-size: 0.833rem;
+$tooltip-bg: $blue;

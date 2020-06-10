@@ -1,0 +1,110 @@
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+
+@mixin h1 {
+  @include rfs(2.488rem); //39.81px
+}
+@mixin h2 {
+  @include rfs(2.074rem); //33.18px
+}
+@mixin h3 {
+  @include rfs(1.728rem); //27.65px
+}
+@mixin h4 {
+  @include rfs(1.44rem); //23.04px
+}
+@mixin h5 {
+  @include rfs(1.2rem); //19.20px
+}
+@mixin h6 {
+  @include rfs(1rem); //39.81px
+}
+@mixin des {
+  @include rfs(0.833rem); //13.33px
+}
+@mixin small {
+  @include rfs(0.694rem); //11.11px
+}
+h1,
+.h1 {
+  @include h1; //39.81px
+  margin: 0;
+}
+h2,
+.h2 {
+  @include h2; //33.18px
+  margin: 0;
+}
+h3,
+.h3 {
+  @include h3; //27.65px
+  margin: 0;
+}
+
+h4,
+.h4 {
+  @include h4; //23.04px
+  margin: 0;
+}
+h5,
+.h5 {
+  @include h5;
+  margin: 0;
+}
+h6,
+.h6 {
+  @include h6;
+  margin: 0;
+}
+
+p,
+.des {
+  @include des;
+  margin: 0;
+}
+small,
+.small {
+  @include small;
+}
+
+// Font weight
+.font-regular {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  @include des;
+  font-weight: 500;
+}
+
+.custom-control-label {
+  font-weight: 400;
+  color: $gray-600;
+}
+
+//text
+
+.text {
+  &-underline {
+    text-decoration: underline;
+    text-decoration-color: inherit;
+  }
+  &-label {
+    @include des;
+    font-weight: 400;
+  }
+}

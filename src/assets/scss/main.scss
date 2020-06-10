@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap");
+// @import "../../node_modules/@yaireo/tagify/dist/tagify.css";
+//customizing bootstrap
+@import "abstracts/variables";
+
+@import "./frameworks/cbootstrap";
+@import "./icon.css";
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layouts/welcome";
+@import "layouts/login";
+@import "layouts/shortcut";
+@import "layouts/dashboard";
+
+@import "layouts/sideoverlay";
+@import "layouts/header";
+@import "layouts/settings";
+@import "layouts/footer";
+
+//@import "components/approval";
+@import "components/card";
+@import "components/list";
+@import "components/buttons";
+
+//@import "components/register";
+@import "components/table";
+@import "components/tabs";
+@import "components/form";
+@import "components/dropdown";
+@import "components/modal";
+//@import "components/slider";
+@import "components/scrollspy";
+@import "components/mail";
+@import "components/notification";
+@import "layouts/sidebar";
+@import "layouts/opmis";
+
+@import "layouts/dma";
+@import "layouts/ias";
