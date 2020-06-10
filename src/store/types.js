@@ -7,4 +7,11 @@ export const GET_POKEMON = 'GET_POKEMON'
 export const SHOW_POKEMON = 'SHOW_POKEMON'
 export const FETCH_ERROR = 'FETCH_ERROR'
 
+//Favorite Pokemon
+
+export const ADD_FAVORITE= 'ADD_FAVORITE'
+export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
+
+
+
 

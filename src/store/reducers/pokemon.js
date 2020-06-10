@@ -1,9 +1,9 @@
-import { GET_POKEMON,SHOW_POKEMON, FETCH_ERROR} from '../types'
+import { GET_POKEMON,SHOW_POKEMON, FETCH_ERROR,ADD_FAVORITE,REMOVE_FAVORITE} from '../types'
 
 const initialState = {
   pokemon: null,
   pokemons: [],
-
+  favorites:[],
   loading: true,
   error: {}
 }
@@ -16,6 +16,14 @@ export default function(state=initialState,action){
       return {...state,pokemons:payload}
     case SHOW_POKEMON:
       return {...state,pokemon:payload}
+    case ADD_FAVORITE:
+      return{...state,favorites:[payload,...state.favorites],loading:false}
+    case REMOVE_FAVORITE:
+      return {
+        ...state,
+        favorites:state.favorites.filter(favorite=> favorite.id !==payload),
+        loading:false,
+      }
     case FETCH_ERROR:
     return {...state,error:payload}
     default: 

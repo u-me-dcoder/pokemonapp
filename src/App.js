@@ -2,8 +2,7 @@ import React from 'react';
 import { HashRouter } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoutes";
 import appRoutes from "./routes/index";
-import './App.css';
-
+import './assets/scss/main.scss'
 function App() {
 
 

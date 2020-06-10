@@ -1,0 +1,19 @@
+.home{
+  background-color: var(--body-bg);
+  height:100vh;
+  aside{
+    position: fixed;
+    width: var(--sidebar-width);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--sidebar-color);
+    overflow:auto;
+    @include scrollable;
+
+   
+
+  }
+  margin-left: var(--sidebar-width);
+  padding: 1rem;
+}
