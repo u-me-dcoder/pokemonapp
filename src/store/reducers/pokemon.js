@@ -13,7 +13,7 @@ export default function(state=initialState,action){
   const {type,payload} =action
   switch(type){
     case GET_POKEMON:
-      return {...state,pokemons:payload}
+      return {...state,pokemons:payload,loading:false}
     case SHOW_POKEMON:
       return {...state,pokemon:payload}
     case ADD_FAVORITE:

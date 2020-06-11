@@ -15,17 +15,7 @@
         border-radius: 50%;
     }
 
-    .indicator{
-      width: .5rem;
-      height: .5rem;
-      display: block;
-      border-radius: 50%;
-      position: absolute;
-      right: 0rem;
-      bottom: .1rem;
-      background-color: $green-30;
-
-    }
+  
 
     &-xl{
         @extend .avatar;

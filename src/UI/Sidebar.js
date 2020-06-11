@@ -13,7 +13,7 @@ export default function Sidebar() {
 
     return(
       <li key={item.name}  >
-        <Link to="/" style={{backgroundColor:item.color}}>{item.name}</Link>
+        <Link to="/" className={`bg-${item.name}`}>{item.name}</Link>
       </li>
     )
   })
