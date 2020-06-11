@@ -1,19 +1,25 @@
 import React from 'react';
-import {types} from '../utils/type'
+
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {images} from '../utils/type'
+  
+
+
+ function Sidebar({types}) {
 
 
 
-export default function Sidebar() {
 
-
-
-
-  let list = types.map((item)=>{
+  let list = types.map((type)=>{
 
     return(
-      <li key={item.name}  >
-        <Link to="/" className={`bg-${item.name}`}>{item.name}</Link>
+      <li key={type.name}  >
+        <Link to="/" className={`badge bg-${type.name}`}  >
+          <img src={images[type.name]} alt={type.name}/>
+        </Link>
+ 
+       
       </li>
     )
   })
@@ -28,3 +34,9 @@ export default function Sidebar() {
   </aside>
   );
 }
+
+const mapDispatchToProps = state =>({
+  types:state.pokemon.types
+})
+
+export default connect(mapDispatchToProps,null)(Sidebar)

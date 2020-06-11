@@ -21,7 +21,7 @@ const RenderRoute = props => {
 };
 
 const PrivateRoute = props => {
-  console.log(props)
+  
   return(
  
     <Switch>

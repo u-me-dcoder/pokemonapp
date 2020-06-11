@@ -5,6 +5,14 @@
   border-radius: 4px;
   padding: .75rem;
   position: relative;
+  margin-bottom: 1.5rem;
+
+  .sprite{
+    display: block;
+    margin:auto;
+    max-width: 100%;
+    height: 100px;
+  }
   
   .favorite{
     position: absolute;

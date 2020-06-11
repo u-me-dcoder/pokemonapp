@@ -18,20 +18,22 @@ import water from '../assets/icons/water.svg'
 import fighting from '../assets/icons/fighting.svg'
 
 export const images = {
-    bug: bug,
+    "bug": bug,
     dragon: dragon,
     fairy: fairy,
     fire: fire,
     ghost: ghost,
+    unknown: ghost,
     ground: ground,
     normal: normal,
     pyschic: psychic,
     steel: steel,
     dark: dark,
+    shadow: dark,
     electric: electric,
     fighting: fighting,
     flying: flying,
-    grass: grass,
+    "grass": grass,
     ice: ice,
     poison: poison,
     rock: rock,
@@ -58,6 +60,8 @@ export const colors = {
     poison: '#B763CF',
     rock: '#C9BB8A',
     water: '#539DDF',
+    shadow: '#595761',
+    unknown: '#5F6DBC',
 }
 
 export const types = [
@@ -87,6 +91,11 @@ export const types = [
         expanded: false
     },
     {
+        name: 'unknown',
+        color: colors.unknown,
+        expanded: false
+    },
+    {
         name: 'ground',
         color: colors.ground,
         expanded: false
@@ -109,6 +118,11 @@ export const types = [
     {
         name: 'dark',
         color: colors.dark,
+        expanded: false
+    },
+    {
+        name: 'shadow',
+        color: colors.shadow,
         expanded: false
     },
     {

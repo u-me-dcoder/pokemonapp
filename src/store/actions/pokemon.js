@@ -1,17 +1,28 @@
 
 import axios from 'axios'
-import {GET_POKEMON,SHOW_POKEMON,FETCH_ERROR} from '../types'
+import {GET_POKEMON,SHOW_POKEMON,FETCH_ERROR,GET_TYPE} from '../types'
 
 
 
 export const getAllPokemon = ()=>async dispatch =>{
   try {
-    let res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=200')
+    // let res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=200')
+    let res = await axios.get('https://pokeapi.co/api/v2/pokemon')
     let allpokemon = await loadPokemon(res.data.results)
-    dispatch({
-      type:GET_POKEMON,
-      payload:allpokemon
-    })
+    let typeresponse = await axios.get('https://pokeapi.co/api/v2/type')
+      .then(res=>{
+        dispatch({
+          type:GET_POKEMON,
+          payload:allpokemon
+        })
+        return res.data.results
+      })
+
+      dispatch({
+        type:GET_TYPE,
+        payload:typeresponse
+      })
+    
   
   } catch (e) {
     dispatch({
@@ -20,6 +31,8 @@ export const getAllPokemon = ()=>async dispatch =>{
     })
   }
 }
+
+
 
  const loadPokemon = async data =>{
 
@@ -33,12 +46,15 @@ export const getAllPokemon = ()=>async dispatch =>{
 }
 
 
-export const showPokemon = (id)=>async dispatch =>{
-  
-}
-
 export const getPokemon =async (url)=>{
 
   let res =await axios.get(url)
   return res.data
+}
+
+
+
+
+export const showPokemon = (id)=>async dispatch =>{
+  
 }

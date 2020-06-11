@@ -5,6 +5,7 @@ const initialState ={
   text:'',
   gender:'',
   habitat:'',
+  region:'',
 
 }
 

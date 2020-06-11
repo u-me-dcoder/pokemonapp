@@ -19,18 +19,23 @@ function Home({ getAllPokemon, pokemon:{loading,pokemons} }) {
   }
 
   let pokemonList = pokemons.map(pokemon=>{
+    let {types} =pokemon
+    
     return(
       <div className="col-lg-2" key={pokemon.order}>
                 <div className="card">
-                  <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+                  <img src={pokemon.sprites.front_default} alt={pokemon.name} className="sprite"/>
                   <i className="favorite"></i>
                   <h6>{pokemon.name}</h6>
                   <div className="types">
-                  {pokemon.types.map((type,i)=>{
-                    let {name}= type
+                  {types.map((data,i)=>{
+              
+                    let {name}= data.type
+                    
                     return (
                       <div className={`badge bg-${name}`} key={i} >
-                        <img src={images.name} alt={pokemon.name}/>
+                        <img src={images[name]}  alt={pokemon.name}/>
+                        
                       </div>
                     )
                   })}
@@ -60,6 +65,8 @@ function Home({ getAllPokemon, pokemon:{loading,pokemons} }) {
         <main>
           This is the Hompage listing
         <div className="container-fluid">
+
+        
             <div className="row">
               {pokemonList}
             </div>

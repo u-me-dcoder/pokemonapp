@@ -1,6 +1,6 @@
 .home{
   background-color: var(--body-bg);
-  height:100vh;
+  min-height:100vh;
   aside{
     position: fixed;
     width: var(--sidebar-width);
