@@ -59,7 +59,7 @@ $pokemon:
     "unknown": #5F6DBC,
     "ground": #DA7C4D,
     "normal": #A0A29F,
-    "pyschic": #FA8581,
+    "psychic": #FA8581,
     "steel": #5695A3,
     "dark": #595761,
     "shadow": #595761,
@@ -72,6 +72,7 @@ $pokemon:
     "rock": #C9BB8A,
     "water": #539DDF,
   );
+  $white:#ffffff;
 
   @each $type, $color in $pokemon{
     .text-#{$type}{
@@ -79,6 +80,10 @@ $pokemon:
     }
     .bg-#{$type}{
       background-color: $color!important;
+    }
+    .gradient-#{$type}{
+      background-color: mix($color,$white,70%);
+      //background-image: linear-gradient(to right top, $color, $color, $color, $color, $color);
     }
 
   }

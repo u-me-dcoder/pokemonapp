@@ -107,6 +107,25 @@
     width:1rem;
     height:1rem;
   }
+  &-name{
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 100px;
+    @include des;
+    padding: .25rem .5rem;
+    img{
+      width: .75rem;
+      height: .75rem;
+      margin-right: .5rem;
+    }
+    span{
+      display: block;
+    }
+  }
 }
+
+
+
 
 

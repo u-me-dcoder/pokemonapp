@@ -10,6 +10,21 @@
     background-color: var(--sidebar-color);
     overflow:auto;
     @include scrollable;
+    z-index: 1;
+
+    .logo{
+      
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      img{
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        margin: auto;
+      }
+    }
 
    
 

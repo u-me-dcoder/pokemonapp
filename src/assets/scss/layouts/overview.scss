@@ -1,0 +1,22 @@
+.overview{
+    min-height: 100vh;
+    &-card{
+        background-color: white;
+        max-width: 320px;
+        margin: auto;
+        border-radius: 20px;
+
+        .title{
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 1rem;
+            @include h3;
+        }
+        
+        .sprite{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+    }
+}

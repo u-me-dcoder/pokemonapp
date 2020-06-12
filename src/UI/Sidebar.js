@@ -3,8 +3,9 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {images} from '../utils/type'
+import ReactTooltip  from 'react-tooltip'
   
-
+import Logo from '../assets/pokemon.svg'
 
  function Sidebar({types}) {
 
@@ -15,9 +16,9 @@ import {images} from '../utils/type'
 
     return(
       <li key={type.name}  >
-        <Link to="/" className={`badge bg-${type.name}`}  >
+        <button   className={`btn badge  bg-${type.name}`} data-tip={type.name}  >
           <img src={images[type.name]} alt={type.name}/>
-        </Link>
+        </button>
  
        
       </li>
@@ -25,7 +26,13 @@ import {images} from '../utils/type'
   })
   return (
     <aside>
-    <div className="logo"></div>
+      <ReactTooltip/>
+    <div className="logo">
+
+
+      <img src={Logo} alt="Pokedex App"/>
+
+    </div>
 
     <ul className="list list-type mt-3">
      {list}

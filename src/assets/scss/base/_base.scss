@@ -3,6 +3,7 @@ html,body{
     font-weight: 400;
     font-size: 1em;
     @include lhCrop(var(--heading-line-height));
+    font-family: 'Roboto', sans-serif;
 
 
     
@@ -40,6 +41,21 @@ a{
     color: inherit;
     }   
 }
+
+.btn{
+    border: unset;
+    outline: unset;
+    background-color: unset;
+    color: unset;
+    padding: 0;
+    margin: 0;
+    width: unset;
+    height: unset;
+    line-height: 1;
+    &:focus{
+      outline: none;
+    }
+  }
 
 @media screen and (min-width: 1420px){
     html,body{

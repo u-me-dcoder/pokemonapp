@@ -16,7 +16,7 @@ export default function(state=initialState,action){
     case GET_POKEMON:
       return {...state,pokemons:payload}
     case SHOW_POKEMON:
-      return {...state,pokemon:payload}
+      return {...state,pokemon:payload,loading:false}
     case ADD_FAVORITE:
       return{...state,favorites:[payload,...state.favorites],loading:false}
     case REMOVE_FAVORITE:

@@ -55,6 +55,11 @@ export const getPokemon =async (url)=>{
 
 
 
-export const showPokemon = (id)=>async dispatch =>{
-  
+export const showPokemon = id=>async dispatch =>{
+  let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+
+  dispatch({
+    type:SHOW_POKEMON,
+    payload:res.data
+  })
 }

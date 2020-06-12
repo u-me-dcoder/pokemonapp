@@ -26,7 +26,7 @@ export const images = {
     unknown: ghost,
     ground: ground,
     normal: normal,
-    pyschic: psychic,
+    psychic: psychic,
     steel: steel,
     dark: dark,
     shadow: dark,
