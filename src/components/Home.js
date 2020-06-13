@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect,useRef} from "react";
 import { connect } from "react-redux";
 import { getAllPokemon } from "../store/actions/pokemon";
 import selectPokemon from '../helpers/pokemons'
@@ -8,23 +8,27 @@ import Header from "../UI/Header";
 
 import Loading from "./Loading";
 import PokemonList from "./PokemonList";
+
 function Home({ getAllPokemon, pokemon: { loading, pokemons },filters }) {
+ 
   useEffect(() => {
     getAllPokemon();
+ 
   }, [getAllPokemon]);
 
   if (loading) {
     return <Loading />;
   }
 
+
+
   
-
-
 
   return (
     <div className="home">
       <Sidebar />
 
+    
       <section>
         {/* <Favorite /> */}
         <Header/>

@@ -1,9 +1,17 @@
-export default (pokemons,{text,habitat,gender,region})=>{
-    console.log('inside select function',pokemons)
+export default (pokemons,{text,habitat,gender,region,type})=>{
+    
     return pokemons.filter(pokemon=>{
+     
         const textMatch = pokemon.name.toLowerCase().includes(text.toLowerCase())
-        return textMatch
+        if(type===''){
+            return textMatch
+        }
+        let newArrary =pokemon.types.filter(data=>data.type.name===type)
+        
+        let typeMatch = newArrary.length>0 ? false :true
+        
+        return textMatch && !typeMatch
     })
 
-    console.log(text)
+   
 }

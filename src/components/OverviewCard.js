@@ -4,7 +4,7 @@ import capitalize from "../helpers/capitalize";
 import Types from "./Types";
 import Tab from "./Tab";
 export default function OverviewCard(props) {
-  let { sprites, name, types, stats, typing } = props;
+  let { sprites, name, types, stats, typing,moves } = props;
   return (
     <div className="overview-card">
       {sprites.front_default != null && (
@@ -13,7 +13,7 @@ export default function OverviewCard(props) {
 
       <h6 className="title">{capitalize(name)}</h6>
       <Types types={types} />
-      <Tab stats={stats} typing={typing} />
+      <Tab stats={stats} typing={typing} moves={moves} />
     </div>
   );
 }

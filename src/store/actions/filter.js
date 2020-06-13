@@ -1,6 +1,6 @@
 
 
-import {SET_TEXT_FILTER,SET_GENDER_FILTER,SET_HABITAT_FILTER,FETCH_ERROR,SET_REGION_FILTER} from '../types'
+import {SET_TEXT_FILTER,SET_GENDER_FILTER,SET_HABITAT_FILTER,FETCH_ERROR,SET_REGION_FILTER,SET_TYPE_FILTER} from '../types'
 
 
 
@@ -56,12 +56,29 @@ export const setHabitat = (habitat)=>async dispatch =>{
   }
 }
 
-export const region = (region)=>async dispatch =>{
+export const setRegion = (region)=>async dispatch =>{
   try {
    
     dispatch({
-      type:SET_HABITAT_FILTER,
+      type:SET_REGION_FILTER,
       payload:region
+    })
+  
+  } catch (e) {
+    dispatch({
+      type:FETCH_ERROR,
+      payload: e
+    })
+  }
+}
+
+export const setType = (type)=>async dispatch =>{
+  console.log(type)
+  try {
+   
+    dispatch({
+      type:SET_TYPE_FILTER,
+      payload:type
     })
   
   } catch (e) {

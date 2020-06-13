@@ -6,8 +6,8 @@ import {GET_POKEMON,SHOW_POKEMON,FETCH_ERROR,GET_TYPE} from '../types'
 
 export const getAllPokemon = ()=>async dispatch =>{
   try {
-    // let res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=200')
-    let res = await axios.get('https://pokeapi.co/api/v2/pokemon')
+    let res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=200')
+    //let res = await axios.get('https://pokeapi.co/api/v2/pokemon')
     let allpokemon = await loadPokemon(res.data.results)
     let typeresponse = await axios.get('https://pokeapi.co/api/v2/type')
       .then(res=>{

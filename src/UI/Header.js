@@ -4,8 +4,10 @@ import {BsSearch} from 'react-icons/bs'
 import {GiFemale,GiMale} from 'react-icons/gi'
 import {connect} from 'react-redux'
 import {setText} from '../store/actions/filter'
- function Header({filters,setText}) {
-   console.log(filters)
+ function Header({filters,setText,reference}) {
+
+   
+   
   return (
     <header>
     <h3 className="heading">What pokemon are you looking for ?</h3>
@@ -32,7 +34,7 @@ import {setText} from '../store/actions/filter'
             </button>
           </div>
           <div className="col-md-3 mb-4">
-            <button className="btn filter-card bg-poison">
+            <button className="btn filter-card bg-poison" onClick={()=>alert('helo')}>
               <h6>Types</h6>
               <img src={Logo} alt="Logo background"/>
             </button>

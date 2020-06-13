@@ -1,4 +1,4 @@
-import { SET_TEXT_FILTER,SET_GENDER_FILTER,SET_HABITAT_FILTER} from '../types'
+import { SET_TEXT_FILTER,SET_GENDER_FILTER,SET_HABITAT_FILTER,SET_TYPE_FILTER} from '../types'
 
 
 const initialState ={
@@ -6,6 +6,7 @@ const initialState ={
   gender:'',
   habitat:'',
   region:'',
+  type:''
 
 }
 
@@ -18,6 +19,8 @@ export default function(state=initialState,action){
       return {...state,gender:payload}
     case SET_HABITAT_FILTER:
       return {...state,habitat:payload}
+      case SET_TYPE_FILTER:
+        return {...state,type:payload}
     default: 
       return state
   }
