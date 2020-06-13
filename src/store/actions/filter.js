@@ -5,6 +5,7 @@ import {SET_TEXT_FILTER,SET_GENDER_FILTER,SET_HABITAT_FILTER,FETCH_ERROR,SET_REG
 
 
 export const setText = (text)=>async dispatch =>{
+  
   try {
    
     dispatch({

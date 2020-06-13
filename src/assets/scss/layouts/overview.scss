@@ -1,22 +1,68 @@
-.overview{
-    min-height: 100vh;
-    &-card{
-        background-color: white;
-        max-width: 320px;
-        margin: auto;
-        border-radius: 20px;
+.overview {
+  min-height: 100vh;
+  &-card {
+    background-color: white;
+    max-width: 320px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: height ease-in 4s;
 
-        .title{
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 1rem;
-            @include h3;
-        }
-        
-        .sprite{
-            max-width: 100%;
-            display: block;
-            margin: auto;
-        }
+    .title {
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 1rem;
+      @include h3;
     }
+
+    .sprite {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+  }
+  &-tab {
+      margin: 1.5rem 0;
+    li {
+      a{
+        display: block;
+        padding: 0.25rem 1rem;
+        @include des;
+        
+        border-radius: 100px;
+        &.active{
+            color: white;
+        }
+        @include hover{
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.stat {
+  &-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 0.25rem;
+
+    h6 {
+      @include small;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+    span {
+      @include small;
+      margin-left: 0.5rem;
+      font-weight: 500;
+      color: #707070;
+    }
+    .progress {
+      width: 100%;
+    }
+  }
 }

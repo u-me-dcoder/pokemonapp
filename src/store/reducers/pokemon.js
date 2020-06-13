@@ -1,7 +1,7 @@
 import { GET_POKEMON,SHOW_POKEMON, FETCH_ERROR,ADD_FAVORITE,REMOVE_FAVORITE,GET_TYPE} from '../types'
 
 const initialState = {
-  pokemon: null,
+  pokemon: undefined,
   pokemons: [],
   favorites:[],
   types:[],

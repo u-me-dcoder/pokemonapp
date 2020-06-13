@@ -32,3 +32,31 @@
   margin-left: var(--sidebar-width);
   padding: 1rem;
 }
+
+.filter{
+  &-card{
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    img{
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: .2;
+    }
+    h6{
+      font-weight: 300;
+    }
+    .icon{
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
