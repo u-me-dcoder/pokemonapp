@@ -1,9 +1,9 @@
-import React, { useEffect,useRef} from "react";
+import React, { useEffect} from "react";
 import { connect } from "react-redux";
 import { getAllPokemon } from "../store/actions/pokemon";
 import selectPokemon from '../helpers/pokemons'
 import Sidebar from "../UI/Sidebar";
-import Favorite from "../UI/Favorite";
+
 import Header from "../UI/Header";
 
 import Loading from "./Loading";

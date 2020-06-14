@@ -8,7 +8,7 @@ import {BsArrowLeft} from 'react-icons/bs'
 import OverviewCard from "./OverviewCard";
 
 function PokemonDetail(props) {
-  console.log(props);
+
   let { showPokemon, pokemons } = props;
   let id = props.computedMatch.params.id;
   let {  pokemon } = pokemons;

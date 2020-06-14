@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from '../assets/pokemon.svg'
 import {BsSearch} from 'react-icons/bs'
-import {GiFemale,GiMale} from 'react-icons/gi'
+import {GiFemale,} from 'react-icons/gi'
 import {connect} from 'react-redux'
 import {setText} from '../store/actions/filter'
  function Header({filters,setText,reference}) {

@@ -8,7 +8,7 @@ let abilities= props.data
 
 let abilityList = abilities.map(item=>{
   let {ability} = item
-  console.log(ability)
+
 
   return(
     <li key={uuidv4()}>

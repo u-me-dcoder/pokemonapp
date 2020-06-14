@@ -13,6 +13,7 @@ export default function PokemonMoves(props) {
     let method = version_group_details[0].move_learn_method
     !moveType.includes(method.name) && moveType.push(method.name)
      moveMethod.push({name:method.name,move:[move.name]}) 
+     return true
   });
 
     let moveList = moveType.map((type,i)=>{
