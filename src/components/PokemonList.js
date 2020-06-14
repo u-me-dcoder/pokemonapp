@@ -7,7 +7,7 @@ export default function PokemonList({ list }) {
     let pokename = capitalize(pokemon.name);
 
     return (
-      <div className="col-lg-2" key={order}>
+      <div className="col-6 col-sm-4 col-md-3 col-xl-2" key={order}>
         <PokemonCard
           id={id}
           sprites={sprites}

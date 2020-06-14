@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import capitalize from '../helpers/capitalize'
 
@@ -15,15 +15,9 @@ export default function PokemonMoves(props) {
      moveMethod.push({name:method.name,move:[move.name]}) 
   });
 
- 
-
-
-    
- 
-  let moveList = moveType.map((type,i)=>{
-    
-
-    let move = moveMethod.map(item=>{
+    let moveList = moveType.map((type,i)=>{
+    let moveset = moveMethod.filter(item=>item.name===type)
+    let move = moveset.map(item=>{
       
       let {move} = item
       return(

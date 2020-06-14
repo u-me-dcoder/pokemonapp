@@ -1,13 +1,16 @@
 .overview {
   min-height: 100vh;
+  position: relative;
+  padding-top: 1.5rem;
   &-card {
+    position: relative;
     background-color: white;
     max-width: 320px;
     margin: auto;
     border-radius: 20px;
     padding: 1.5rem;
     transition: height ease-in 4s;
-
+   
     .title {
       font-weight: 400;
       text-align: center;
@@ -19,6 +22,12 @@
       max-width: 100%;
       display: block;
       margin: auto;
+    }
+
+    .overview-return{
+      svg{
+        color: white;
+      }
     }
   }
   &-tab {
@@ -39,6 +48,24 @@
         }
       }
     }
+  }
+  &-return{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba($white,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+      box-shadow: 0 2px 4px rgba($white,.4);
+      color: white;
+    }
+    
   }
 }
 
@@ -82,6 +109,28 @@
       }
     }
   }
+  &-list{
+    @include small;
+    display: flex;
+    flex-wrap: wrap;
+    
+    li{
+      background-color: #eee;
+      padding: .25rem .5rem;
+      border-radius: 4px;
+      margin-bottom: .5rem;
+      &:not(:last-child){
+        margin-right: .5rem;
+      }
+      &:hover{
+        background-color: rgba($blue,.1);
+        color: $blue;
+      }
+    }
+  }
+}
+
+.ability{
   &-list{
     @include small;
     display: flex;

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { showPokemon } from "../store/actions/pokemon";
 import Loading from "./Loading";
+import {BsArrowLeft} from 'react-icons/bs'
 
 import OverviewCard from "./OverviewCard";
 
@@ -23,7 +24,7 @@ function PokemonDetail(props) {
 
     return (
       <div className={`overview gradient-${primaryType.name}`}>
-        <Link to="/">Go Back</Link>
+        <Link to="/" className={`overview-return d-none d-sm-flex text-${primaryType.name}`}> <BsArrowLeft/></Link>
         <OverviewCard
           sprites={sprites}
           name={name}

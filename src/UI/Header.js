@@ -21,25 +21,25 @@ import {setText} from '../store/actions/filter'
 
     
         <div className="row">
-          <div className="col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4">
             <button className="btn filter-card bg-grass">
               <h6>Habitat</h6>
               <img src={Logo} alt="Logo background"/>
             </button>
           </div>
-          <div className="col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4">
             <button className="btn filter-card bg-fire">
               <h6>Region</h6>
               <img src={Logo} alt="Logo background"/>
             </button>
           </div>
-          <div className="col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4">
             <button className="btn filter-card bg-poison" onClick={()=>alert('helo')}>
               <h6>Types</h6>
               <img src={Logo} alt="Logo background"/>
             </button>
           </div>
-          <div className="col-md-3 mb-4">
+          <div className="col-6 col-md-3 mb-4">
             <button className="btn filter-card bg-water">
               <h6>Gender</h6>
               <GiFemale className="icon"/>

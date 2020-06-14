@@ -2,8 +2,9 @@ import React, { Fragment,useState } from 'react'
 import {NavLink,TabContent,TabPane} from 'reactstrap'
 import PokemonStats from './PokemonStats'
 import PokemonMoves from './PokemonMoves';
+import PokemonAbility from './PokemonAbility'
 export default function Tab(props) {
-    let {stats,typing,moves}=props
+    let {stats,typing,moves,abilities}=props
     const [activeTab, setActiveTab] = useState("1");
 
     const toggle = (tab) => {
@@ -40,7 +41,7 @@ export default function Tab(props) {
                 toggle("3");
               }}
             >
-              evolution
+              Abilities
             </NavLink>
           </li>
         </ul>
@@ -51,7 +52,9 @@ export default function Tab(props) {
           <TabPane tabId="2">
             <PokemonMoves data={moves}/>
           </TabPane>
-          <TabPane tabId="3">evolution</TabPane>
+          <TabPane tabId="3">
+            <PokemonAbility data={abilities}/>
+          </TabPane>
         </TabContent>
         </Fragment>
     )
